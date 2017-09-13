@@ -1,9 +1,3 @@
-/*
-设计思路：在创建servo class时对servo进行计数，每有8个servo启动一个定时器
-
-*/
-
-
 #include "DFRobot_ESP32_servo.h"
 
 servoDef servos[SERVO_NUM_MAX];
