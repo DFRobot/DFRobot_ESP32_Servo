@@ -188,7 +188,7 @@ void DFRobot_ESP32_Servo::writeMicroseconds(int value)
   if(servos[this->servoIndex].Pin.isActive) {
     timerAlarmDisable(timers[this->servoIndex / 8]);
     this->lastWriteValue = value;
-    if(temp < 180) {
+    if(temp <= 180) {
       temp = temp * (SERVO_PULSE_MAX - SERVO_PULSE_MIN) / 180 + SERVO_PULSE_MIN;
       servos[this->servoIndex].ticks = temp;
     }
